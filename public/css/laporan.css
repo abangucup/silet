@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;1,400&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+}
+
+.light {
+    font-weight: 300;
+}
+
+.medium {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.header {
+    height: 200px;
+}
+
+.animasi {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    background: #3282b8;
+    overflow: hidden;
+}
+
+.animasi .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(../images/wave.png);
+    background-size: 1000px 100px;
+}
+
+.animasi .wave1 {
+    -webkit-animation: animate 30s linear infinite;
+    animation: animate 30s linear infinite;
+    z-index: 999;
+    opacity: 1;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    bottom: 0;
+}
+
+.animasi .wave2 {
+    -webkit-animation: animate2 15s linear infinite;
+    animation: animate2 15s linear infinite;
+    z-index: 998;
+    opacity: 0.5;
+    -webkit-animation-delay: -5s;
+    animation-delay: -5s;
+    bottom: 10px;
+}
+
+.wave3 {
+    -webkit-animation: animate2 30s linear infinite;
+    animation: animate2 30s linear infinite;
+    z-index: 997;
+    opacity: 0.2;
+    -webkit-animation-delay: -2s;
+    animation-delay: -2s;
+    bottom: -15px;
+}
+
+.animasi .wave4 {
+    -webkit-animation: animate2 5s linear infinite;
+    animation: animate2 5s linear infinite;
+    z-index: 996;
+    opacity: 0.7;
+    -webkit-animation-delay: -5s;
+    animation-delay: -5s;
+    bottom: 15px;
+}
+
+@-webkit-keyframes animate {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+@keyframes animate {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+@-webkit-keyframes animate2 {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: -1000px;
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: -1000px;
+    }
+}
+
+.semi-bold {
+    font-weight: 600;
+}
+
+.photo {
+    width: 70px;
+    height: 70px;
+    float: left;
+    border-radius: 50%;
+    margin-right: 16px;
+    /* margin-left: 20px; */
+}
+
+.tab {
+    color: #000;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 0px 6px 10px 6px;
+}
+
+.tab:hover {
+    color: #3282b8;
+    text-decoration: none;
+    font-weight: 300;
+    padding: 0px 6px 10px 6px;
+    border-bottom: 2px solid #3282b8;
+}
+
+.tab-active {
+    font-size: 20px;
+    border-bottom: 2px solid #3282b8;
+    color: #3282b8;
+    padding-bottom: 10px;
+}
+
+hr {
+    margin-top: 9px;
+}
+
+.laporan-top {
+    padding-top: 16px;
+}
+
+.laporan-top .profile {
+    width: 50px;
+    height: 50px;
+    float: left;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+
+.laporan-top p {
+    font-weight: 300;
+    font-size: 16px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.laporan-mid .judul-pengaduan {
+    font-size: 500;
+    font-size: 18px;
+    color: #3282b8;
+    margin-top: 24px;
+}
+
+.laporan-mid .judul-permintaan {
+    font-size: 500;
+    font-size: 18px;
+    color: #3282b8;
+    margin-top: 24px;
+}
+
+.laporan-mid p {
+    font-weight: 300;
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.laporan-bottom {
+    margin-bottom: 24px;
+}
+
+#myImage {
+    height: 200px;
+    width: 150px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImage:hover {
+    opacity: 0.7;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1001; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content,
+#caption {
+    animation-name: zoom;
+    animation-duration: 0.3s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0.1);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.card-body {
+    background-color: #fff;
+}
+
+/*# sourceMappingURL=laporan.css.map */
